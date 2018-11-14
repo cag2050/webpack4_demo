@@ -13,5 +13,7 @@ yarn-error.log*
 *.njsproj
 *.sln
 
-1_entry_output/node_modules
-1_entry_output/dist
+1.1_entry_output/node_modules
+1.1_entry_output/dist
+1.2_multi_entry/node_modules
+1.2_multi_entry/dist

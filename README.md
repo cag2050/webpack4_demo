@@ -1,4 +1,4 @@
-webpack 4 教程
+* webpack 4 教程
 参考：https://segmentfault.com/u/thanksforhappy/articles
 英文原版：https://wanago.io/2018/07/16/webpack-4-course-part-one-entry-output-and-es6-modules/
 

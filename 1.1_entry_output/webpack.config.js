@@ -1,5 +1,7 @@
 module.exports = {
-    // 默认值
+    // mode 默认值
+    mode: "production",
+    // entry 默认值
     // 下面2个entry是等价的
     // entry: './src/index.js',
     entry: {
@@ -7,6 +9,7 @@ module.exports = {
         main: './src/index.js'
     },
     /*
+    // output 默认值
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'main.js'

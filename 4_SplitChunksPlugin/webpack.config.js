@@ -24,9 +24,11 @@ module.exports = {
                     priority: -10
                 },
                 // default 这一项表示默认的缓存组，包含其它共享模块（此处是 utilities/users.js）。
+                // 如果用户新建一个缓存组cacheGroup，会覆盖default缓存组；因为新建缓存组默认的优先级值是0, 高于default缓存组的优先级-20。
                 default: {
                     // 只有当模块被重复引用的次数大于等于该数字时，这个模块才会被提取出来。
                     minChunks: 2,
+                    // default 的默认优先级是 -20；手动添加的优先级是0，大于默认优先级
                     priority: -20,
                     // 是否重用 chunk；如果当前块包含已经从主bundle中分离出来的模块，那么它将用已经分离出来的模块，而不是生成一个新的模块，需要在精确匹配到对应模块时候才会生效；一般设置为 true
                     reuseExistingChunk: true

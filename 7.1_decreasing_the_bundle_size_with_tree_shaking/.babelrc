@@ -1,0 +1,10 @@
+{
+    "presets": [
+        ["@babel/preset-env",
+            {
+                // Babel的预案（preset）默认会将任何模块类型都转译成CommonJS类型。修正这个问题也很简单，在.babelrc文件中或在webpack.config.js文件中设置modules： false就好了。
+                "modules": false
+            }
+        ]
+    ]
+}

@@ -4,7 +4,7 @@
 /******/ 		var chunkIds = data[0];
 /******/ 		var moreModules = data[1];
 /******/
-/******/ 		var prefetchChunks = data[3] || [];
+/******/
 /******/ 		// add "moreModules" to the modules object,
 /******/ 		// then flag all "chunkIds" as loaded and fire callback
 /******/ 		var moduleId, chunkId, i = 0, resolves = [];
@@ -21,22 +21,7 @@
 /******/ 			}
 /******/ 		}
 /******/ 		if(parentJsonpFunction) parentJsonpFunction(data);
-/******/ 		// chunk prefetching for javascript
-/******/ 		var head = document.getElementsByTagName('head')[0];
-/******/ 		prefetchChunks.forEach(function(chunkId) {
-/******/ 			if(installedChunks[chunkId] === undefined) {
-/******/ 				installedChunks[chunkId] = null;
-/******/ 				var link = document.createElement('link');
 /******/
-/******/ 				if (__webpack_require__.nc) {
-/******/ 					link.setAttribute("nonce", __webpack_require__.nc);
-/******/ 				}
-/******/ 				link.rel = "prefetch";
-/******/ 				link.as = "script";
-/******/ 				link.href = jsonpScriptSrc(chunkId);
-/******/ 				head.appendChild(link);
-/******/ 			}
-/******/ 		});
 /******/ 		while(resolves.length) {
 /******/ 			resolves.shift()();
 /******/ 		}
@@ -208,7 +193,6 @@
 /******/ 	var parentJsonpFunction = oldJsonpFunction;
 /******/
 /******/
-/******/ 	webpackJsonpCallback([[], {}, 0, ["divide"]]);
 /******/ 	// Load entry module and return exports
 /******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
 /******/ })

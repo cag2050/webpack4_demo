@@ -5,6 +5,8 @@
 * 说明：
 每个文件夹，是一个npm项目，都需要运行`npm install`安装需要的node模块。
 
+* webpack 的 mode 分别为 development、production、none 时，默认配置文件：webpack.default.config.development.js、webpack.default.config.production.js、webpack.default.config.none.js。
+
 * vue-cli v3 中，webpack 在开发环境和生产环境下的配置文件：vue.cli.3.webpack.config.development.js、vue.cli.3.webpack.config.production.js。
 
 ### style-loader、css-loader、mini-css-extract-plugin 区别
